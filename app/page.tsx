@@ -109,10 +109,15 @@ export default function InterviewProPlatform() {
                 </Avatar>
               ) : (
                 <div className="flex items-center space-x-2">
-                  <Button variant="ghost" onClick={() => setIsLoggedIn(true)}>
+                  <Button variant="ghost" onClick={() => (window.location.href = "/auth/login")}>
                     Login
                   </Button>
-                  <Button className="bg-indigo-600 hover:bg-indigo-700">Sign Up</Button>
+                  <Button
+                    className="bg-indigo-600 hover:bg-indigo-700"
+                    onClick={() => (window.location.href = "/auth/signup")}
+                  >
+                    Sign Up
+                  </Button>
                 </div>
               )}
             </div>
@@ -145,10 +150,14 @@ export default function InterviewProPlatform() {
                   Profile
                 </a>
                 <div className="flex space-x-2 px-3 pt-2">
-                  <Button variant="ghost" size="sm">
+                  <Button variant="ghost" size="sm" onClick={() => (window.location.href = "/auth/login")}>
                     Login
                   </Button>
-                  <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700">
+                  <Button
+                    size="sm"
+                    className="bg-indigo-600 hover:bg-indigo-700"
+                    onClick={() => (window.location.href = "/auth/signup")}
+                  >
                     Sign Up
                   </Button>
                 </div>
@@ -178,11 +187,20 @@ export default function InterviewProPlatform() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-lg px-8 py-3">
+                <Button
+                  size="lg"
+                  className="bg-indigo-600 hover:bg-indigo-700 text-lg px-8 py-3"
+                  onClick={() => (window.location.href = "/auth/signup")}
+                >
                   Start Free Mock Interview
                   <ChevronRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-3 bg-transparent">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-3 bg-transparent"
+                  onClick={() => alert("Demo video coming soon!")}
+                >
                   Watch Demo
                   <Play className="w-5 h-5 ml-2" />
                 </Button>
@@ -247,7 +265,12 @@ export default function InterviewProPlatform() {
                   <li>• Multiple programming languages</li>
                   <li>• AI code review</li>
                 </ul>
-                <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Try Now</Button>
+                <Button
+                  className="w-full bg-indigo-600 hover:bg-indigo-700"
+                  onClick={() => alert("Technical Round coming soon! Please sign up to get notified.")}
+                >
+                  Try Now
+                </Button>
               </CardContent>
             </Card>
 
@@ -267,7 +290,12 @@ export default function InterviewProPlatform() {
                   <li>• Body language feedback</li>
                   <li>• Communication scoring</li>
                 </ul>
-                <Button className="w-full bg-green-600 hover:bg-green-700">Try Now</Button>
+                <Button
+                  className="w-full bg-green-600 hover:bg-green-700"
+                  onClick={() => alert("HR Round coming soon! Please sign up to get notified.")}
+                >
+                  Try Now
+                </Button>
               </CardContent>
             </Card>
 
@@ -287,7 +315,12 @@ export default function InterviewProPlatform() {
                   <li>• Architecture patterns</li>
                   <li>• Scalability analysis</li>
                 </ul>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">Try Now</Button>
+                <Button
+                  className="w-full bg-purple-600 hover:bg-purple-700"
+                  onClick={() => alert("System Design coming soon! Please sign up to get notified.")}
+                >
+                  Try Now
+                </Button>
               </CardContent>
             </Card>
           </div>
